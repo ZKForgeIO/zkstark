@@ -87,6 +87,32 @@ const isValid = verifier.verify(proof);
 console.log(`Proof verified: ${isValid}`);
 ```
 
+## Testing
+
+Run the test suite using:
+
+```bash
+npm run test
+```
+
+Expected output:
+
+```text
+> @zkforge/zkstark@1.0.0 test
+> jest --config jest.config.cjs
+
+ PASS  tests/zkstark-auth.test.ts
+  zkSTARK-style auth prototype
+    ✓ accepts a valid auth proof for the correct secret (15 ms)
+    ✓ rejects a proof if the public finalHash is tampered (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        2.499 s, estimated 3 s
+Ran all test suites.
+```
+
 ## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
